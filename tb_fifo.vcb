@@ -1,0 +1,184 @@
+$date
+	Mon Dec 06 14:26:32 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_fifo $end
+$var wire 8 ! r_data [7:0] $end
+$var wire 1 " full $end
+$var wire 1 # empty $end
+$var reg 1 $ clk $end
+$var reg 1 % rd $end
+$var reg 1 & reset $end
+$var reg 8 ' w_data [7:0] $end
+$var reg 1 ( wr $end
+$scope module u_fifo $end
+$var wire 1 $ clk $end
+$var wire 1 # empty $end
+$var wire 1 " full $end
+$var wire 8 ) r_data [7:0] $end
+$var wire 1 % rd $end
+$var wire 1 & reset $end
+$var wire 8 * w_data [7:0] $end
+$var wire 1 ( wr $end
+$var wire 1 + wr_en $end
+$var reg 1 , empty_next $end
+$var reg 1 - empty_reg $end
+$var reg 1 . full_next $end
+$var reg 1 / full_reg $end
+$var reg 2 0 r_ptr_next [1:0] $end
+$var reg 2 1 r_ptr_reg [1:0] $end
+$var reg 2 2 r_ptr_succ [1:0] $end
+$var reg 2 3 w_ptr_next [1:0] $end
+$var reg 2 4 w_ptr_reg [1:0] $end
+$var reg 2 5 w_ptr_succ [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 5
+b0 4
+b0 3
+b1 2
+b0 1
+b0 0
+0/
+0.
+1-
+1,
+0+
+b0 *
+bx )
+0(
+b0 '
+1&
+0%
+0$
+1#
+0"
+bx !
+$end
+#1000
+1+
+0,
+b1 3
+b10 '
+b10 *
+1(
+0&
+1$
+#2000
+0$
+#3000
+b10 3
+b10 5
+0#
+0-
+b1 4
+b1000 !
+b1000 )
+1$
+b1000 '
+b1000 *
+#4000
+0$
+#5000
+b11 3
+b11 5
+b10 4
+1$
+b101 '
+b101 *
+#6000
+0$
+#7000
+1.
+b0 3
+b0 5
+b11 4
+1$
+#8000
+0$
+#9000
+0+
+b1 5
+1"
+1/
+b0 4
+1$
+b1 '
+b1 *
+#10000
+0$
+#11000
+1$
+b1000 '
+b1000 *
+#12000
+b1 0
+b1 3
+0$
+1%
+#13000
+b10 0
+b10 3
+b10 2
+b10 5
+b101 !
+b101 )
+b1 1
+b1 4
+1$
+#14000
+0$
+#15000
+b11 0
+b11 3
+b11 2
+b11 5
+b10 1
+b10 4
+1$
+#16000
+0$
+#17000
+b0 0
+b0 3
+b0 2
+b0 5
+b1 !
+b1 )
+b11 1
+b11 4
+1$
+#18000
+0$
+#19000
+b1 0
+b1 3
+b1 2
+b1 5
+b1000 !
+b1000 )
+b0 1
+b0 4
+1$
+#20000
+0$
+#21000
+b10 0
+b10 3
+b10 2
+b10 5
+b101 !
+b101 )
+b1 1
+b1 4
+1$
+#22000
+0$
