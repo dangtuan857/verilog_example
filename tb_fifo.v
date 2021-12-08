@@ -19,6 +19,9 @@ module tb_fifo;
     wire  [B-1:0]  r_data;
 
 
+
+
+
 fifo#(
     .B    (8),
     .W    (2)
@@ -51,27 +54,27 @@ fifo#(
         #1;
         reset = 0;
         wr = 1;
-        w_data = 2;
+        w_data = 1;
         
         #2;
-        w_data = 8;
+        w_data = 2;
+
+        #2;
+        w_data = 3;
+
+        #2;
+        w_data = 4;
 
         #2;
         w_data = 5;
 
         #2;
-        w_data = 5;
-
-        #2;
-        w_data = 1;
-
-        #2;
-        w_data = 8;
+        w_data = 6;
         
         #1;
         rd = 1;
 
-        #10;
+        #15;
         $finish;
     end
     
@@ -79,7 +82,7 @@ fifo#(
     begin
         $dumpfile("tb_fifo.vcb");
         $dumpvars(0,tb_fifo);
-        $monitor("Time = %g ,full= %b,empty = %b,rd = %b, wr = %b , w_data = %b, r_data = %b \n",$time,full,empty,rd,wr,w_data,r_data);
+        $monitor("Time = %g ,full= %d,empty = %d,rd = %d, wr = %d , w_data = %d, r_data = %d \n",$time,full,empty,rd,wr,w_data,r_data);
     end
 
 endmodule
