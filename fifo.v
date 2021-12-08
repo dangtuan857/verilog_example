@@ -72,14 +72,11 @@ module fifo #(parameter B = 8,             // number of bits in a word
         end
         2'b10: // write
         begin
-            if (~full_reg) // not full
+            w_ptr_next = w_ptr_succ;
+            empty_next = 1'b0;
+            if (w_ptr_succ == r_ptr_reg)
             begin
-                w_ptr_next = w_ptr_succ;
-                empty_next = 1'b0;
-                if (w_ptr_succ == r_ptr_reg)
-                begin
-                    full_next = 1'b1;
-                end
+                full_next = 1'b1;
             end
         end
         2'b11: // write and read
